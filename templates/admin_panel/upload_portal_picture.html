@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Upload Portal Picture - Admin Panel{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h4>Upload Portal Profile Picture</h4>
+            </div>
+            <div class="card-body text-center">
+                <p class="text-muted">Upload a profile picture that will be displayed on the portal.</p>
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="portal_picture" class="form-label">Choose Portal Picture</label>
+                        <input type="file" class="form-control" id="portal_picture" name="portal_picture" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <a href="{% url 'admin_panel:admin_dashboard' %}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

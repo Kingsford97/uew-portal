@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Classes - UEW SMS{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">Classes</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Code</th>
+                            <th>Department</th>
+                            <th>Class Teacher</th>
+                            <th>Students</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for class in classes %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ class.name }}</td>
+                            <td>{{ class.code }}</td>
+                            <td>{{ class.department.name }}</td>
+                            <td>{{ class.class_teacher.full_name|default:"Not Assigned" }}</td>
+                            <td>{{ class.current_students }}/{{ class.capacity }}</td>
+                            <td>
+                                <span class="badge bg-{% if class.is_active %}success{% else %}danger{% endif %}">
+                                    {% if class.is_active %}Active{% else %}Inactive{% endif %}
+                                </span>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="7" class="text-center">No classes found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

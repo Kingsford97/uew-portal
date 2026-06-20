@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Departments - UEW SMS{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">Departments</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Code</th>
+                            <th>Head of Department</th>
+                            <th>Subjects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dept in departments %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ dept.name }}</td>
+                            <td>{{ dept.code }}</td>
+                            <td>{{ dept.head_of_department.full_name|default:"Not Assigned" }}</td>
+                            <td>{{ dept.subjects.count }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center">No departments found.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

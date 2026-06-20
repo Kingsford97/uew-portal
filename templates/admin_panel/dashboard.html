@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard - UEW Association{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="mb-4">Administration Panel</h2>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Total Members</h5>
+                <h2>{{ total_members }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Verified Members</h5>
+                <h2>{{ verified_members }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Paid Dues</h5>
+                <h2>{{ paid_members }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body">
+                <h5 class="card-title">Pending Verification</h5>
+                <h2>{{ pending_verification }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{% url 'admin_panel:add_member' %}" class="btn btn-primary w-100 mb-2">Add Member</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'admin_panel:member_list' %}" class="btn btn-info w-100 mb-2">View Members</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'admin_panel:manage_dues' %}" class="btn btn-success w-100 mb-2">Manage Dues</a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'admin_panel:manage_payment_accounts' %}" class="btn btn-warning w-100 mb-2">Payment Accounts</a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3">
+                        <a href="{% url 'admin_panel:upload_portal_picture' %}" class="btn btn-secondary w-100">Upload Portal Picture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5>Recent Members</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Index Number</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for member in members %}
+                        <tr>
+                            <td>{{ member.name }}</td>
+                            <td>{{ member.index_number }}</td>
+                            <td>{{ member.department }}</td>
+                            <td>
+                                {% if member.is_verified %}
+                                    <span class="badge bg-success">Verified</span>
+                                {% else %}
+                                    <span class="badge bg-warning">Pending</span>
+                                {% endif %}
+                            </td>
+                            <td><a href="{% url 'admin_panel:verify_member' member.id %}" class="btn btn-sm btn-primary">Verify</a>
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center">No members registered yet.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
