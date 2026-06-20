@@ -5,86 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="233bb6f1-93d7-4d63-80dd-7aa17f0c4d0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uew_portal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_panel/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_panel/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communications/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communications/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/communications/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/classes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/departments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/subjects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/timetable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examinations/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examinations/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examinations/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finance/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finance/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/finance/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ngrok_run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/students/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teachers/_init_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teachers/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teachers/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/add_member.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/manage_dues.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/manage_payment_accounts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/member_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/upload_portal_picture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin_panel/verify_member.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/communications/announcements.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/communications/events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/examinations/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/examinations/exams.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/finance/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/finance/expenses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/finance/fee_structure.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/finance/student_fees.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/library/books.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/library/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/pay_dues.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/profile_setup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/update_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/members/upload_picture.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/academic_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/attendance_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/dashbord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/financial_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/library_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reports/student_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/attendance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/grades.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/teachers/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/teachers/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/teachers/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/teachers/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uew_portal.zip/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uew_portal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uew_portal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uew_portal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/uew_portal/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,61 +37,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000053806129368" />
-      <entry key="MS500" value="1.1912570681898598" />
-      <entry key="S2" value="3.86053950614751" />
-      <entry key="S5" value="8.72839803132994" />
-      <entry key="S10" value="13.417454262008604" />
-      <entry key="S30" value="18.978259688172553" />
-      <entry key="S60" value="20.860688282194197" />
-      <entry key="M2" value="21.924006557109816" />
-      <entry key="M5" value="22.79125718178075" />
-      <entry key="M10" value="23.26539466128496" />
-      <entry key="M15" value="23.50166118254725" />
-      <entry key="M30" value="26.365510248997417" />
-      <entry key="H1" value="58.80142823152276" />
-      <entry key="H2" value="197.17326715192792" />
-      <entry key="H4" value="466.3309359708657" />
-      <entry key="D1" value="1074.6632725597517" />
-      <entry key="W1" value="1252.3146781910418" />
+      <entry key="MS100" value="1.0003624416836856" />
+      <entry key="MS500" value="1.2473576114907823" />
+      <entry key="S2" value="3.1797686891173287" />
+      <entry key="S5" value="5.509497552741079" />
+      <entry key="S10" value="6.950866940849892" />
+      <entry key="S30" value="8.233589710491731" />
+      <entry key="S60" value="8.611510875266063" />
+      <entry key="M2" value="8.99429977580408" />
+      <entry key="M5" value="13.217475951069275" />
+      <entry key="M10" value="25.565881854699036" />
+      <entry key="M15" value="37.710246579170374" />
+      <entry key="M30" value="67.78931812516268" />
+      <entry key="H1" value="112.28245552600264" />
+      <entry key="H2" value="220.4118612941787" />
+      <entry key="H4" value="466.7804723554532" />
+      <entry key="D1" value="1169.1429538908947" />
+      <entry key="W1" value="1401.2198513183573" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
+      <entry key="S5" value="6.847688381077545E-264" />
+      <entry key="S10" value="2.6168088163023222E-132" />
+      <entry key="S30" value="1.3780257452205698E-44" />
+      <entry key="S60" value="1.17389341305783E-22" />
+      <entry key="M2" value="1.0834636187052322E-11" />
+      <entry key="M5" value="4.1107941814656514E-5" />
+      <entry key="M10" value="0.006411547536644855" />
+      <entry key="M15" value="0.03451240660411144" />
+      <entry key="M30" value="0.18577515066367523" />
+      <entry key="H1" value="0.4310164157705309" />
+      <entry key="H2" value="0.6565184047462268" />
+      <entry key="H4" value="0.8102582333714516" />
+      <entry key="D1" value="0.9655406785287636" />
+      <entry key="W1" value="0.9950029490208256" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.972659813789619" />
-      <entry key="MS500" value="1.1816753654870298" />
-      <entry key="S2" value="3.841918066884682" />
-      <entry key="S5" value="8.709249445379326" />
-      <entry key="S10" value="13.402351316522095" />
-      <entry key="S30" value="18.97106027534798" />
-      <entry key="S60" value="20.856704097148" />
-      <entry key="M2" value="21.921577381651804" />
-      <entry key="M5" value="22.789227994814315" />
-      <entry key="M10" value="23.26376910850702" />
-      <entry key="M15" value="23.500362459500884" />
-      <entry key="M30" value="26.36466435326126" />
-      <entry key="H1" value="58.800615378699824" />
-      <entry key="H2" value="197.1720397165498" />
-      <entry key="H4" value="466.32947069905987" />
-      <entry key="D1" value="1074.6626994947098" />
-      <entry key="W1" value="1252.3145825970248" />
+      <entry key="MS100" value="0.9333507103310889" />
+      <entry key="MS500" value="1.2255182168514" />
+      <entry key="S2" value="3.108976714990525" />
+      <entry key="S5" value="5.4410097454023685" />
+      <entry key="S10" value="6.904366410862164" />
+      <entry key="S30" value="8.214535132268852" />
+      <entry key="S60" value="8.60147415080529" />
+      <entry key="M2" value="8.98906017004357" />
+      <entry key="M5" value="13.214156700353376" />
+      <entry key="M10" value="25.568721658876566" />
+      <entry key="M15" value="37.74108359374457" />
+      <entry key="M30" value="67.97153625610127" />
+      <entry key="H1" value="112.71052931222957" />
+      <entry key="H2" value="221.06599536844345" />
+      <entry key="H4" value="467.5886800961475" />
+      <entry key="D1" value="1170.107761916382" />
+      <entry key="W1" value="1402.2147313753933" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -246,7 +176,7 @@
       <updated>1781814540922</updated>
       <workItem from="1781814541898" duration="10371000" />
       <workItem from="1781894726305" duration="15647000" />
-      <workItem from="1781947378348" duration="19412000" />
+      <workItem from="1781947378348" duration="26189000" />
     </task>
     <servers />
   </component>

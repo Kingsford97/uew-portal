@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Student Grades{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">Student Grades</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="stat-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="stat-label">Total Subjects</div>
+                        <div class="stat-number">{{ total_subjects|default:0 }}</div>
+                    </div>
+                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="stat-label">Average Score</div>
+                        <div class="stat-number">{{ average_score|floatformat:1|default:0 }}%</div>
+                    </div>
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr><th>Subject</th><th>Assignment</th><th>Test</th><th>Exam</th><th>Total</th><th>Grade</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for record in records %}
+                        <tr>
+                            <td>{{ record.subject.name }}</td>
+                            <td>{{ record.assignment_score }}</td>
+                            <td>{{ record.test_score }}</td>
+                            <td>{{ record.exam_score }}</td>
+                            <td><strong>{{ record.total_score }}</strong></td>
+                            <td><span class="badge bg-{% if record.grade == 'A' %}success{% elif record.grade == 'F' %}danger{% else %}warning{% endif %}">{{ record.grade }}</span></td>
+                        </tr>
+                        {% empty %}
+                        <tr><td colspan="6" class="text-center">No grades found.</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

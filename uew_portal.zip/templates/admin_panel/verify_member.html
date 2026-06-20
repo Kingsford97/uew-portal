@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Verify Member - Admin Panel{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4>Verify Member</h4>
+            </div>
+            <div class="card-body text-center">
+                {% if member.profile_picture %}
+                    <img src="{{ member.profile_picture.url }}" alt="Profile" class="profile-pic mb-3" style="width:150px;height:150px;">
+                {% else %}
+                    <div class="profile-pic mb-3 d-flex align-items-center justify-content-center bg-secondary text-white" style="width:150px;height:150px;margin:0 auto;">
+                        <span style="font-size: 60px;">{{ member.name|first|upper }}</span>
+                    </div>
+                {% endif %}
+
+                <h4>{{ member.name }}</h4>
+                <p class="text-muted">{{ member.index_number }}</p>
+
+                <div class="text-start mt-3">
+                    <p><strong>Course:</strong> {{ member.course }}</p>
+                    <p><strong>Department:</strong> {{ member.department }}</p>
+                    <p><strong>Association:</strong> {{ member.department_association }}</p>
+                    <p><strong>Position:</strong> {{ member.position }}</p>
+                    <p><strong>Registered:</strong> {{ member.registration_date|date:"M d, Y" }}</p>
+                    <p><strong>Dues Paid:</strong> {% if member.has_paid_dues %}✅ Yes (GHS {{ member.dues_amount }}){% else %}❌ No{% endif %}</p>
+                    <p><strong>Current Status:</strong>
+                        {% if member.is_verified %}
+                            <span class="badge bg-success">Verified</span>
+                        {% else %}
+                            <span class="badge bg-warning">Pending Verification</span>
+                        {% endif %}
+                    </p>
+                </div>
+
+                <form method="post" class="mt-3">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success">Verify Member</button>
+                    <a href="{% url 'admin_panel:admin_dashboard' %}" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

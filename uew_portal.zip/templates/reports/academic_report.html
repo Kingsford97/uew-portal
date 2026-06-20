@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Academic Report - UEW SMS{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="mb-4">Academic Report</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="stat-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="stat-label">Total Records</div>
+                        <div class="stat-number">{{ total_records }}</div>
+                    </div>
+                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <div class="stat-label">Average Score</div>
+                        <div class="stat-number">{{ average_score|floatformat:1 }}%</div>
+                    </div>
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Grade Distribution</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for grade, count in grade_distribution.items %}
+                        <div class="col-md-2 text-center">
+                            <h2>{{ grade }}</h2>
+                            <p class="text-muted">{{ count }} students</p>
+                            <div class="progress">
+                                <div class="progress-bar bg-{% if grade == 'A' %}success{% elif grade == 'F' %}danger{% else %}warning{% endif %}"
+                                     style="width: {{ count|default:0 }}%"></div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-md-12 text-center">No grade data available.</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

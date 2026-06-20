@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Member List - Admin Panel{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        <h5>All Members</h5>
+        <a href="{% url 'admin_panel:add_member' %}" class="btn btn-primary btn-sm">Add New Member</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Profile</th>
+                        <th>Name</th>
+                        <th>Index Number</th>
+                        <th>Department</th>
+                        <th>Association</th>
+                        <th>Dues</th>
+                        <th>Verified</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for member in members %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>
+                            {% if member.profile_picture %}
+                                <img src="{{ member.profile_picture.url }}" alt="Profile" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+                            {% else %}
+                                <div class="bg-secondary text-white d-inline-flex align-items-center justify-content-center" style="width:40px;height:40px;border-radius:50%;">
+                                    {{ member.name|first|upper }}
+                                </div>
+                            {% endif %}
+                        </td>
+                        <td>{{ member.name }}</td>
+                        <td>{{ member.index_number }}</td>
+                        <td>{{ member.department }}</td>
+                        <td>{{ member.department_association }}</td>
+                        <td>
+                            {% if member.has_paid_dues %}
+                                <span class="badge bg-success">Paid</span>
+                            {% else %}
+                                <span class="badge bg-danger">Unpaid</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if member.is_verified %}
+                                <span class="badge bg-success">✅</span>
+                            {% else %}
+                                <span class="badge bg-warning">⏳</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{% url 'admin_panel:verify_member' member.id %}" class="btn btn-sm btn-primary">Verify</a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="9" class="text-center">No members registered yet.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
