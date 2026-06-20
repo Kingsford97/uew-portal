@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ownermanagementsystem-portal
+    env: python
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn uew_portal.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
